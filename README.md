@@ -39,6 +39,9 @@ The records directory contains files listing the file hashes associated with eac
     * The sha256 values correspond to the original version.
 * There may be some names solely consisting of "-<X>".
   
+# Why this format? #
+   The memmap'd format for storage probably isn't ideal -- it would be better to have stored + shared the malware as feature sets similar to how EMBER stores the data. However, to save time during testing we would effectively add all newly generated malware samples to the existing memmap'd set, letting us run quicker tests. Hopefully at some point in the future I'll go through and revise the format storage.
+   
 # Usage #
 **Assuming you've already unzipped**, the following code would be an example of running a classifier over the kipple data:
 ```
