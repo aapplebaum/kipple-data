@@ -59,7 +59,7 @@ ndim = extractor.dim
 # Load the data in the array we want to use
 target_data="msf_normal"
 num_entries=sum(1 for line in open("records/" + target_data + ".txt"))
-malware_data = np.memmap("data/" + target_data + ".dat", dtype=np.float32, mode="r", shape=(5884, ndim))
+malware_data = np.memmap("data/" + target_data + ".dat", dtype=np.float32, mode="r", shape=(num_entries, ndim))
 
 # Load a local model
 model_location="/exes/kipple_repo/kipple/models/initial.txt.gz"
