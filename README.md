@@ -35,11 +35,10 @@ The records directory contains files listing the file hashes associated with eac
     * In some cases, multiple variants of the same original sample were created; in these cases, after the original sample is created, the subsequent ones have a "-ABC-<X>.exe" after them, where <X> is the variant number. 
     * In some cases, a sha256 value may be used in place of an MD5.
 * All hashes under the "sorel" category of file hashes are the hashes of the _original_ malware.
-    * SoReL modifies the malware binaries to be non-executable, giving them a different hash than the "active" malware.
-    * The sha256 values correspond to the _active_ version.
+    * SoReL modifies the malware binaries to be non-executable, giving them a different hash than the "active"/original malware.
+    * The sha256 values correspond to the original version.
 * There may be some names solely consisting of "-<X>".
-
-
+  
 # Usage #
 **Assuming you've already unzipped**, the following code would be an example of running a classifier over the kipple data:
 ```
